@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Neon Command</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+
+  <div class="overlay">
+    <header class="topbar">
+      <div class="logo">
+        <img src="icons/icon-48.svg" alt="logo" />
+        <span>Neon Command</span>
+      </div>
+      <div class="right-controls">
+        <button id="settingsBtn" title="Settings">⚙</button>
+      </div>
+    </header>
+
+    <main class="center">
+      <div class="clock" id="clock">00:00</div>
+      <div class="greeting" id="greeting">Welcome</div>
+
+      <form id="searchForm" class="search" autocomplete="off">
+        <input id="searchInput" placeholder="Search the web (press Enter)" autofocus />
+      </form>
+
+      <div class="notes" id="notes">
+        <textarea id="noteInput" placeholder="Quick note... (saved locally)"></textarea>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="small">High-tech new tab • Local-only data</div>
+    </footer>
+  </div>
+
+  <!-- Settings Modal -->
+  <div id="settingsModal" class="modal" aria-hidden="true">
+    <div class="modal-panel">
+      <h2>Settings</h2>
+
+      <label>
+        Theme color:
+        <input id="themeColor" type="color" value="#00fff6" />
+      </label>
+
+      <div class="modal-actions">
+        <button id="saveSettings">Save</button>
+        <button id="resetSettings">Reset</button>
+        <button id="closeSettings">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
